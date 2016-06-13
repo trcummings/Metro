@@ -4,8 +4,8 @@ class Flash
   def initialize(req)
     @flash = {}
 
-    if req.cookies['_rails_lite_flash']
-      @flash_now = JSON.parse(req.cookies['_rails_lite_flash'])
+    if req.cookies['_metro_flash']
+      @flash_now = JSON.parse(req.cookies['_metro_flash'])
     else
       @flash_now = {}
     end
@@ -24,6 +24,6 @@ class Flash
   end
 
   def store_flash(res)
-    res.set_cookie('_rails_lite_flash', { path: "/", value: @flash.to_json })
+    res.set_cookie('_metro_flash', { path: "/", value: @flash.to_json })
   end
 end

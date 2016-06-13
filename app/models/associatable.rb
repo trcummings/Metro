@@ -124,6 +124,6 @@ module Associatable
   end
 end
 
-class SQLObject
+class MetroBase
   extend Associatable
 end

@@ -1,7 +1,7 @@
 require_relative '../../lib/db_connection'
 require 'active_support/inflector'
 
-class SQLObject
+class MetroBase
   def self.columns
     unless @columns
       query = <<-SQL

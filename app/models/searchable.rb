@@ -1,5 +1,5 @@
 require_relative '../../lib/db_connection'
-require_relative 'sql_object'
+require_relative 'metro_base'
 
 module Searchable
   def where(params)
@@ -20,6 +20,6 @@ module Searchable
   end
 end
 
-class SQLObject
+class MetroBase
   extend Searchable
 end

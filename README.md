@@ -8,6 +8,6 @@ Metro combines a bare-bones ORM with a bare-bones MVC based on Rails' ActiveReco
 
 Clone in, bundle install, and run ruby lib/server.rb
 
-check out localhost:3000/howdoilook
-check out localhost:3000/counter
-check out localhost:3000/cats
+check out localhost:3000/howdoilook,
+localhost:3000/counter, 
+or localhost:3000/cats!

@@ -1,10 +1,11 @@
 require 'sqlite3'
+require 'byebug'
 
 PRINT_QUERIES = ENV['PRINT_QUERIES'] == 'true'
 # https://tomafro.net/2010/01/tip-relative-paths-with-file-expand-path
 DB_FOLDER = File.join(File.dirname(__FILE__), '../db/')
-SQL_FILE = File.join(DB_FOLDER, '*.sql')
-DB_FILE = File.join(DB_FOLDER, '*.db')
+SQL_FILE = File.join(DB_FOLDER, 'cats.sql')
+DB_FILE = File.join(DB_FOLDER, 'cats.db')
 
 class DBConnection
   def self.open(db_file_name)
@@ -18,7 +19,7 @@ class DBConnection
   def self.reset
     commands = [
       "rm '#{DB_FILE}'",
-      "sqlfile '#{SQL_FILE}' | sqlite3 '#{DB_FILE}'"
+      "cat '#{SQL_FILE}' | sqlite3 '#{DB_FILE}'"
     ]
 
     commands.each { |command| `#{command}` }

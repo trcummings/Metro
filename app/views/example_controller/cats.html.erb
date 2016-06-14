@@ -1,0 +1,9 @@
+<h1>Some cats, for your consideration</h1>
+
+<ul>
+<% @cats.each do |cat| %>
+  <li>
+    <%= cat.attributes %>
+  </li>
+<% end %>
+</ul>

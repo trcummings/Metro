@@ -123,7 +123,6 @@ class MetroBase
         #{where_line}
     SQL
 
-    # debugger
     DBConnection.execute(query, *attr_values)
   end
 

@@ -74,6 +74,6 @@ end
 Clone in, `bundle install`, and run `ruby lib/server.rb`
 
 Check out:
-* localhost:3000/howdoilook,
-* localhost:3000/counter,
-* localhost:3000/cats!
+* localhost:3000/howdoilook
+* localhost:3000/counter
+* localhost:3000/cats
